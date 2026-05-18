@@ -51,7 +51,9 @@ export default function App() {
 
       <div style={styles.box}>
         <p>인식된 말</p>
-        <h2>{text || "아직 없음"}</h2>
+      <h2 style={styles.resultText}>
+  {text || "아직 없음"}
+</h2>  
       </div>
     </div>
   );
@@ -69,6 +71,7 @@ const styles = {
     padding: 20,
     backgroundColor: "#f5f5f5",
   },
+
   button: {
     fontSize: 28,
     padding: "18px 34px",
@@ -77,10 +80,12 @@ const styles = {
     backgroundColor: "#ffb703",
     cursor: "pointer",
   },
+
   status: {
     fontSize: 22,
     marginTop: 24,
   },
+
   box: {
     marginTop: 30,
     backgroundColor: "white",
@@ -88,5 +93,12 @@ const styles = {
     padding: 30,
     width: 300,
     boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+  },
+
+  resultText: {
+    color: "#2196f3",
+    fontSize: 42,
+    fontWeight: "bold",
+    marginTop: 10,
   },
 };
