@@ -25,7 +25,7 @@ export default function App() {
     recognition.onresult = (event) => {
       const resultText = event.results[0][0].transcript;
       setText(resultText);
-      setStatus("인식 완료!");
+      setStatus("정답!");
     };
 
     recognition.onerror = (event) => {
